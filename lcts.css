@@ -1,0 +1,50 @@
+/* @theme lcts */
+@import 'default';
+
+/* marple theme with a few tweaks for lcts using images/logos.png as background image as header 
+and images/bordeaux_pontpierre.png as background image for the footer */
+/* define following as titlepage*/
+section.title{
+    background-color: white;
+    color: black;
+    background-image: url('images/bord_pierre.png'),url('images/logos.png');
+    background-position: center bottom, left top;
+    background-repeat: no-repeat;
+    background-size: 75%, 35%;
+}
+section h1{
+    position : absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.3em;
+    margin: 0;
+    font-size: 1.8em;
+    font-family: sans-serif;
+    color: brown;
+}
+section h2{
+    position : absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.3em;
+    margin: 0;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    color: brown;
+}
+section{
+    text-align: justify;
+    margin: 0;
+    font-size: 1.3em;
+}
+section footer,
+section::after{
+    color: brown;
+}
+section::after{
+    content: attr(data-marpit-pagination)'/'attr(data-marpit-pagination-total);
+}
